@@ -1,3 +1,8 @@
+-- 1. Crear user entrenador
+-- 2. Alter session con entrenador para almacenar las tablas en el user Entrenador
+ALTER SESSION SET CURRENT_SCHEMA = ENTRENADOR;
+
+-- 3. Creación de tablas (debe de hacerse en ese orden)
 CREATE TABLE CIRCUNFERENCIAS (
 ID_Circunferencias INT PRIMARY KEY,
   BicepsRej NUMBER,
@@ -183,3 +188,86 @@ Registro TIMESTAMP,
 ID_Atleta INT,
 FOREIGN KEY (ID_Atleta) REFERENCES Atleta (ID_Atleta)
 );
+
+-- 4. Asignación de privilegios para Entrenador para importar datos
+
+ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
+GRANT CONNECT, RESOURCE TO Entrenador;
+GRANT UNLIMITED TABLESPACE TO ENTRENADOR;
+
+-- 5. Visualizar datos
+
+SELECT * FROM CIRCUNFERENCIAS;
+SELECT * FROM PLIEGUES;
+SELECT * FROM MORFOLOGIA;
+SELECT * FROM LATERALIDAD;
+SELECT * FROM EJERCICIOS;
+SELECT * FROM CALENTAMIENTO;
+SELECT * FROM ESPECIFICO;
+SELECT * FROM RECUPERACION;
+SELECT * FROM DEPORTE;
+SELECT * FROM RECORD;
+SELECT * FROM CICLO;
+SELECT * FROM ANTROPOMETRIA;
+SELECT * FROM PLAN;
+SELECT * FROM CCR;
+SELECT * FROM ATLETA;
+SELECT * FROM REGISTRO;
+
+-- 6. Funcion Clasificacion 1, 2, 3
+
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PACKAGE Clasificacion AS
+  -- 6.1 Atletas por deporte
+  FUNCTION GetAtletaPorDeporte(nombreDeporte VARCHAR2) RETURN SYS_REFCURSOR;
+
+  -- 6.2 IMC
+  FUNCTION CalculateIMC(atletaID INT) RETURN NUMBER;
+
+  -- 6.3 Clasificacion
+  FUNCTION GetMiIMC(imc NUMBER) RETURN VARCHAR2;
+END Clasificacion;
+/
+
+CREATE OR REPLACE PACKAGE BODY Clasificacion AS
+  FUNCTION GetAtletaPorDeporte(nombreDeporte VARCHAR2) RETURN SYS_REFCURSOR IS
+    atletas SYS_REFCURSOR;
+  BEGIN
+    OPEN atletas FOR
+      SELECT a.*
+      FROM Atleta a
+      INNER JOIN Deporte d ON a.ID_Deporte = d.ID_Deporte
+      WHERE d.Disciplina1 = nombreDeporte OR d.Disciplina2 = nombreDeporte;
+    RETURN atletas;
+  END GetAtletaPorDeporte;
+END Clasificacion;
+/
+
+FUNCTION CalculateIMC(atletaID INT) RETURN NUMBER IS
+masa NUMBER;
+altura NUMBER;
+imc NUMBER;
+Begin
+SELECT a.Masa, an.Altura INTO masa, altura
+FROM Atleta a
+INNER JOIN Antropometria an ON a.ID_Antropometria = an.ID_Antropometria
+WHERE a.ID_Atleta = atletaID;
+
+imc := masa / (altura * altura);
+
+RETURN imc;
+END CalculateIMC;
+
+FUNCTION GetMiIMC(imc NUMBER) RETURN VARCHAR2 IS category VARCHAR2(20);
+BEGIN 
+IF imc < 18.5 THEN category := 'bajo peso';
+ELSIF imc >= 18.5 AND imc < 24.9 THEN category := 'Normo peso';
+ELSIF imc >= 24.9 AND imc < 29.9 THEN category := 'Sobre peso';
+ELSE category := 'Obesidad';
+END IF;
+
+RETURN category;
+END GetMiIMC;
+END Clasificacion;
+/
