@@ -214,7 +214,7 @@ SELECT * FROM CCR;
 SELECT * FROM ATLETA;
 SELECT * FROM REGISTRO;
 
--- 6. Funcion Clasificacion 1, 2, 3
+-- 6. Funcion Clasificacion 1, 2, 3, 4, 5 
 
 SET SERVEROUTPUT ON;
 
@@ -227,6 +227,12 @@ CREATE OR REPLACE PACKAGE Clasificacion AS
 
   -- 6.3 Clasificacion
   FUNCTION GetMiIMC(imc NUMBER) RETURN VARCHAR2;
+  
+  -- 6.4 MusloContraido
+  FUNCTION CalculateMusloContraido RETURN NUMBER;
+  
+  -- 6.5 BicepContraido
+  FUNCTION CalculateBicepContraido RETURN NUMBER;
 END Clasificacion;
 /
 
@@ -269,5 +275,36 @@ END IF;
 
 RETURN category;
 END GetMiIMC;
+
+FUNCTION CalculateMusloContraido RETURN NUMBER
+AS
+  v_MusloCont NUMBER;
+  v_MusloRej NUMBER;
+  v_Resultado NUMBER;
+BEGIN
+  SELECT MusloCont, MusloRej INTO v_MusloCont, v_MusloRej FROM CIRCUNFERENCIAS WHERE ID_Circunferencias = ID_Circunferencias;
+
+  v_Resultado := v_MusloCont - v_MusloRej;
+
+  RETURN v_Resultado;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    RETURN NULL;
+END CalculateMusloContraido;
+
+FUNCTION CalculateBicepContraido RETURN NUMBER
+AS
+  v_BicepsCont NUMBER;
+  v_BicepsRej NUMBER;
+  v_Resultado NUMBER;
+BEGIN
+  SELECT BicepsCont, BicepsRej INTO v_BicepsCont, v_BicepsRej FROM CIRCUNFERENCIAS WHERE ID_Circunferencias = ID_Circunferencias;
+
+  v_Resultado := v_BicepsCont - v_BicepsRej;
+  RETURN v_Resultado;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    RETURN NULL;
+END CalculateBicepContraido;
 END Clasificacion;
 /
