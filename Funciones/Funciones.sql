@@ -209,3 +209,132 @@ BEGIN
 END;
 /
 PRINT result_cursor;
+
+--Total de registros de un atleta en tabla registro
+CREATE OR REPLACE FUNCTION ObtenerTotalRegistrosAtleta(p_ID_Atleta INT)
+RETURN INT IS
+  v_Total INT;
+BEGIN
+  SELECT COUNT(*) INTO v_Total FROM Registro WHERE ID_Atleta = p_ID_Atleta;
+  RETURN v_Total;
+END;
+/
+
+SELECT ObtenerTotalRegistrosAtleta(1) AS TotalRegistros FROM DUAL;
+
+
+--Obtener el ejercicio de calentamiento más utilizado
+CREATE OR REPLACE FUNCTION ObtenerEjercicioCalentamientoMasUsado
+RETURN VARCHAR2 IS
+v_Ejercicio VARCHAR2(100);
+BEGIN
+SELECT e.Ejercicio INTO v_Ejercicio
+FROM Ejercicios e
+JOIN Calentamiento c ON e.ID_Ejercicio = c.Ejercicio1
+GROUP BY e.Ejercicio
+ORDER BY COUNT(*) DESC
+FETCH FIRST ROW ONLY;
+RETURN v_Ejercicio;
+END;
+/
+
+SELECT ObtenerEjercicioCalentamientoMasUsado() AS EjercicioCalentamiento FROM DUAL;
+
+--Obtener el ejercicio de específico más utilizado
+CREATE OR REPLACE FUNCTION ObtenerEjercicioEspecificoMasUsado
+RETURN VARCHAR2 IS
+v_Ejercicio VARCHAR2(100);
+BEGIN
+SELECT e.Ejercicio INTO v_Ejercicio
+FROM Ejercicios e
+JOIN Especifico c ON e.ID_Ejercicio = c.Ejercicio1
+GROUP BY e.Ejercicio
+ORDER BY COUNT(*) DESC
+FETCH FIRST ROW ONLY;
+RETURN v_Ejercicio;
+END;
+/
+
+SELECT ObtenerEjercicioEspecificoMasUsado() AS EjercicioEspecifico FROM DUAL;
+
+--Obtener el ejercicio de recuperación más utilizado
+CREATE OR REPLACE FUNCTION ObtenerEjercicioRecuperacionMasUsado
+RETURN VARCHAR2 IS
+v_Ejercicio VARCHAR2(100);
+BEGIN
+SELECT e.Ejercicio INTO v_Ejercicio
+FROM Ejercicios e
+JOIN Recuperacion C ON e.ID_Ejercicio = c.Ejercicio1
+GROUP BY e.Ejercicio
+ORDER BY COUNT(*) DESC
+FETCH FIRST ROW ONLY;
+RETURN v_Ejercicio;
+END;
+/
+
+SELECT ObtenerEjercicioRecuperacionMasUsado() AS EjercicioRecuperacion FROM DUAL;
+
+--Calculo de pliegues
+CREATE OR REPLACE FUNCTION ObtenerSumaPliegues(p_ID_Antropometria INT)
+RETURN NUMBER IS
+  v_SumaPliegues NUMBER;
+BEGIN
+  SELECT p.Bicipital + p.Tricipital + p.Subescapular + p.Abdominal INTO v_SumaPliegues
+  FROM Pliegues p
+  JOIN Antropometria a ON p.ID_Pliegues = a.ID_Pliegues
+  WHERE a.ID_Antropometria = p_ID_Antropometria;
+  RETURN v_SumaPliegues;
+END;
+/
+
+SELECT ObtenerSumaPliegues(1) AS SumaPliiegues FROM DUAL;
+
+--Cantidad de ejercicios de calentamiento
+CREATE OR REPLACE FUNCTION ObtenerCantidadEjercioCalentamiento(
+p_ID_Ejercicio INT
+) RETURN INT IS
+v_Cantidad INT;
+BEGIN
+SELECT COUNT(*) INTO v_Cantidad
+FROM Calentamiento c
+WHERE c.Ejercicio1 = p_ID_Ejercicio OR c.Ejercicio2 = p_ID_Ejercicio OR c.Ejercicio3 = p_ID_Ejercicio OR 
+c.Ejercicio4 = p_ID_Ejercicio OR c.Ejercicio5 = p_ID_Ejercicio OR c.Ejercicio6 = p_ID_Ejercicio OR
+c.Ejercicio7 = p_ID_Ejercicio OR c.Ejercicio8 = p_ID_Ejercicio;
+RETURN v_Cantidad;
+END;
+/
+
+SELECT ObtenerCantidadEjercioCalentamiento(1) AS CantidadEjercicioCalentamiento FROM DUAL;
+
+--Cantidad de ejercicios de especifico
+CREATE OR REPLACE FUNCTION ObtenerCantidadEjercioEspecifico(
+p_ID_Ejercicio INT
+) RETURN INT IS
+v_Cantidad INT;
+BEGIN
+SELECT COUNT(*) INTO v_Cantidad
+FROM Especifico c
+WHERE c.Ejercicio1 = p_ID_Ejercicio OR c.Ejercicio2 = p_ID_Ejercicio OR c.Ejercicio3 = p_ID_Ejercicio OR 
+c.Ejercicio4 = p_ID_Ejercicio OR c.Ejercicio5 = p_ID_Ejercicio OR c.Ejercicio6 = p_ID_Ejercicio OR
+c.Ejercicio7 = p_ID_Ejercicio OR c.Ejercicio8 = p_ID_Ejercicio;
+RETURN v_Cantidad;
+END;
+/
+
+SELECT ObtenerCantidadEjercioEspecifico(1) AS CantidadEjercicioEspecifico FROM DUAL;
+
+--Cantidad de ejercicios de recuperacion
+CREATE OR REPLACE FUNCTION ObtenerCantidadEjercioRecuperacion(
+p_ID_Ejercicio INT
+) RETURN INT IS
+v_Cantidad INT;
+BEGIN
+SELECT COUNT(*) INTO v_Cantidad
+FROM Recuperacion c
+WHERE c.Ejercicio1 = p_ID_Ejercicio OR c.Ejercicio2 = p_ID_Ejercicio OR c.Ejercicio3 = p_ID_Ejercicio OR 
+c.Ejercicio4 = p_ID_Ejercicio OR c.Ejercicio5 = p_ID_Ejercicio OR c.Ejercicio6 = p_ID_Ejercicio;
+RETURN v_Cantidad;
+END;
+/
+
+SELECT ObtenerCantidadEjercioRecuperacion(2) AS CantidadEjercicioRecuperacion FROM DUAL;
