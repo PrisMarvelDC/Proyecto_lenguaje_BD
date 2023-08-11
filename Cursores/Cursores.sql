@@ -294,3 +294,83 @@ BEGIN
 END;
 
 EXEC cursor_pabdo;
+
+--Información del atleta
+DECLARE 
+CURSOR c_atletas IS
+SELECT ID_Atleta, FN
+FROM Atleta;
+BEGIN 
+FOR r_atleta In c_atletas LOOP
+DBMS_OUTPUT.PUT_LINE('ID: ' || r_atleta.ID_Atleta || ', Fecha de nacmiento: ' || r_atleta.FN);
+END LOOP;
+END;
+/
+
+--Informacion de antropometría de un atleta
+DECLARE
+  CURSOR c_antropometria (p_ID_Antropometria INT) IS
+    SELECT Masa, Altura
+    FROM Antropometria
+    WHERE ID_Antropometria = p_ID_Antropometria;
+  v_ID_Antropometria INT := 1;
+BEGIN
+  FOR r_antropometria IN c_antropometria(v_ID_Antropometria) LOOP
+    DBMS_OUTPUT.PUT_LINE('Masa: ' || r_antropometria.Masa || ', Altura: ' || r_antropometria.Altura);
+  END LOOP;
+END;
+/
+
+--Ejercicios de calentamiento de un registro
+DECLARE
+  CURSOR c_ejercicios_calentamiento (p_ID_Calentamiento INT) IS
+    SELECT e.Ejercicio
+    FROM EJERCICIOS e
+    JOIN Calentamiento c ON e.ID_Ejercicio = c.Ejercicio1 OR e.ID_Ejercicio = c.Ejercicio2
+      OR e.ID_Ejercicio = c.Ejercicio3 OR e.ID_Ejercicio = c.Ejercicio4
+      OR e.ID_Ejercicio = c.Ejercicio5 OR e.ID_Ejercicio = c.Ejercicio6
+      OR e.ID_Ejercicio = c.Ejercicio7 OR e.ID_Ejercicio = c.Ejercicio8
+    WHERE c.ID_Calentamiento = p_ID_Calentamiento;
+  v_ID_Calentamiento INT := 1;
+BEGIN
+  FOR r_ejercicio_calentamiento IN c_ejercicios_calentamiento(v_ID_Calentamiento) LOOP
+    DBMS_OUTPUT.PUT_LINE('Ejercicio de calentamiento: ' || r_ejercicio_calentamiento.Ejercicio);
+  END LOOP;
+END;
+/
+
+--Ejercicios de específico de un registro
+DECLARE
+  CURSOR c_ejercicios_especifico (p_ID_Especifico INT) IS
+    SELECT e.Ejercicio
+    FROM EJERCICIOS e
+    JOIN Especifico c ON e.ID_Ejercicio = c.Ejercicio1 OR e.ID_Ejercicio = c.Ejercicio2
+      OR e.ID_Ejercicio = c.Ejercicio3 OR e.ID_Ejercicio = c.Ejercicio4
+      OR e.ID_Ejercicio = c.Ejercicio5 OR e.ID_Ejercicio = c.Ejercicio6
+      OR e.ID_Ejercicio = c.Ejercicio7 OR e.ID_Ejercicio = c.Ejercicio8
+      OR e.ID_Ejercicio = c.Ejercicio9 OR e.ID_Ejercicio = c.Ejercicio10
+    WHERE c.ID_Especifico = p_ID_Especifico;
+  v_ID_Especifico INT := 1;
+BEGIN
+  FOR r_ejercicio_especifico  IN c_ejercicios_Especifico (v_ID_Especifico ) LOOP
+    DBMS_OUTPUT.PUT_LINE('Ejercicio de especifico: ' || r_ejercicio_especifico.Ejercicio);
+  END LOOP;
+END;
+/
+
+--Ejercicios de recuperación de un registro
+DECLARE
+  CURSOR c_ejercicios_recuperacion (p_ID_Recuperacion INT) IS
+    SELECT e.Ejercicio
+    FROM EJERCICIOS e
+    JOIN Recuperacion c ON e.ID_Ejercicio = c.Ejercicio1 OR e.ID_Ejercicio = c.Ejercicio2
+      OR e.ID_Ejercicio = c.Ejercicio3 OR e.ID_Ejercicio = c.Ejercicio4
+      OR e.ID_Ejercicio = c.Ejercicio5 OR e.ID_Ejercicio = c.Ejercicio6
+    WHERE c.ID_Recuperacion = p_ID_Recuperacion;
+  v_ID_Recuperacion INT := 1;
+BEGIN
+  FOR r_ejercicio_recuperacion  IN c_ejercicios_Recuperacion (v_ID_Recuperacion) LOOP
+    DBMS_OUTPUT.PUT_LINE('Ejercicio de recuperacion: ' || r_ejercicio_recuperacion.Ejercicio);
+  END LOOP;
+END;
+/
