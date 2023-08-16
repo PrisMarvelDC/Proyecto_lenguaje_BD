@@ -133,3 +133,109 @@ RAISE_APPLICATION_ERROR(-20010, 'La referencia al ID_Record no es válida.');
 END IF;
 END;
 /
+
+--Verficar edad
+CREATE OR REPLACE TRIGGER Verificar_Edad
+BEFORE INSERT ON Atleta
+FOR EACH ROW
+BEGIN
+  IF MONTHS_BETWEEN(SYSDATE, :NEW.FN) < 216 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'El atleta debe ser mayor de 18 años.');
+  END IF;
+END;
+/
+
+--Verficar circunferencias positivas
+CREATE OR REPLACE TRIGGER Verificar_Circunferencias
+BEFORE INSERT OR UPDATE ON CIRCUNFERENCIAS
+FOR EACH ROW
+BEGIN
+  IF :NEW.BicepsRej <= 0 OR :NEW.BicepsCont <= 0 OR :NEW.Muneca <= 0 OR
+     :NEW.Antebrazo <= 0 OR :NEW.Pecho <= 0 OR :NEW.Cintura <= 0 OR
+     :NEW.Cadera <= 0 OR :NEW.MusloRej <= 0 OR :NEW.MusloCont <= 0 OR
+     :NEW.Pantorrilla <= 0 OR :NEW.Tobillo <= 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Los valores deben ser mayores a 0 en la tabla CIRCUNFERENCIAS.');
+  END IF;
+END;
+/
+
+--Verificar antropometria positivas
+CREATE OR REPLACE TRIGGER Verificar_Antropometria
+BEFORE INSERT OR UPDATE ON Antropometria
+FOR EACH ROW
+BEGIN
+  IF :NEW.Masa <= 0 OR :NEW.Altura <= 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Los valores deben ser mayores a 0 en la tabla Antropometria.');
+  END IF;
+END;
+/
+
+--Verificar pliegues positivos
+CREATE OR REPLACE TRIGGER Verificar_Pliegues
+BEFORE INSERT OR UPDATE ON Pliegues
+FOR EACH ROW
+BEGIN
+  IF :NEW.Bicipital <= 0 OR :NEW.Tricipital <= 0 OR :NEW.Subescapular <= 0 OR
+     :NEW.Abdominal <= 0 OR :NEW.Supraespinal <= 0 OR :NEW.Suprailiaco <= 0 OR
+     :NEW.Cuadricipal <= 0 OR :NEW.Peroneal <= 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Los valores deben ser mayores a 0 en la tabla Pliegues.');
+  END IF;
+END;
+/
+
+--Verificación de datos de Atleta
+CREATE OR REPLACE TRIGGER Verificar_Null_Atleta
+BEFORE INSERT OR UPDATE ON Atleta
+FOR EACH ROW
+BEGIN
+  IF :NEW.FN IS NULL OR :NEW.ID_Deporte IS NULL OR :NEW.ID_PB IS NULL OR
+     :NEW.ID_Ciclo IS NULL OR :NEW.ID_Antropometria IS NULL OR :NEW.ID_Plan IS NULL OR
+     :NEW.ID_CCR IS NULL THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se permiten valores NULL en la tabla Atleta.');
+  END IF;
+END;
+/
+
+--Creación de ID unico en cada ciclo
+CREATE SEQUENCE SEQ_CICLO;
+
+CREATE OR REPLACE TRIGGER Asignar_ID_Ciclo
+BEFORE INSERT ON Ciclo
+FOR EACH ROW
+BEGIN
+  :NEW.ID_Ciclo := SEQ_Ciclo.NEXTVAL;
+END;
+/
+
+--Verificación de referencias de deporte
+CREATE OR REPLACE TRIGGER Verificar_Referencias_Deporte
+BEFORE DELETE ON Deporte
+FOR EACH ROW
+DECLARE
+  v_count NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_count FROM Atleta WHERE ID_Deporte = :OLD.ID_Deporte;
+  IF v_count > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se puede eliminar el deporte porque está siendo referenciado por la tabla Atleta.');
+  END IF;
+END;
+/
+
+--
+CREATE OR REPLACE TRIGGER Evitar_Borrado_Con_Registro
+BEFORE DELETE ON Atleta
+FOR EACH ROW
+DECLARE
+  v_count NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_count
+  FROM Registro
+  WHERE ID_Atleta = :OLD.ID_Atleta;
+
+  IF v_count > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se puede eliminar el atleta porque tiene registros en la tabla Registro.');
+  END IF;
+END;
+/
+
+

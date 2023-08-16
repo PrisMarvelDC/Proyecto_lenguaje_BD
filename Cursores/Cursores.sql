@@ -374,3 +374,67 @@ BEGIN
   END LOOP;
 END;
 /
+
+--Información de los cilos de entrenamiento
+DECLARE
+  CURSOR c_ciclos_entrenamiento IS
+    SELECT ID_Ciclo, Masociclo, Mesociclo, Microcilo
+    FROM Ciclo;
+BEGIN
+  FOR r_ciclo IN c_ciclos_entrenamiento LOOP
+    DBMS_OUTPUT.PUT_LINE('ID Ciclo: ' || r_ciclo.ID_Ciclo || ', Masociclo: ' || r_ciclo.Masociclo ||
+                         ', Mesociclo: ' || r_ciclo.Mesociclo || ', Microciclo: ' || r_ciclo.Microcilo);
+  END LOOP;
+END;
+/
+
+--Cantidad de atletas por deporte
+DECLARE
+  CURSOR c_cantidad_atletas_disciplina IS
+    SELECT d.Disciplina1, COUNT(a.ID_Atleta) AS Cantidad_Atletas
+    FROM Deporte d
+    JOIN Atleta a ON d.ID_Deporte = a.ID_Deporte
+    GROUP BY d.Disciplina1;
+BEGIN
+  FOR r_cantidad_atletas_disciplina IN c_cantidad_atletas_disciplina LOOP
+    DBMS_OUTPUT.PUT_LINE('Disciplina: ' || r_cantidad_atletas_disciplina.Disciplina1 ||
+                         ', Cantidad de Atletas: ' || r_cantidad_atletas_disciplina.Cantidad_Atletas);
+  END LOOP;
+END;
+/
+
+--Contar atletas por lateralidad
+DECLARE
+  CURSOR c_contar_lateralidad (p_ID_Atleta INT) IS
+    SELECT a.ID_Atleta,
+           CASE
+             WHEN l.Lateralidad = 'Diestro' THEN 1
+             ELSE 0
+           END AS Diestro,
+           CASE
+             WHEN l.Lateralidad = 'Zurdo' THEN 1
+             ELSE 0
+           END AS Zurdo,
+           CASE
+             WHEN l.Lateralidad = 'Ambidiestro' THEN 1
+             ELSE 0
+           END AS Ambidiestro
+    FROM Atleta a
+    JOIN Lateralidad l ON a.ID_CCR = l.ID_Lateralidad
+    WHERE a.ID_Atleta = p_ID_Atleta;
+  v_ID_Atleta INT := 1; -- ID del atleta a consultar
+  v_Diestro INT := 0;
+  v_Zurdo INT := 0;
+  v_Ambidiestro INT := 0;
+BEGIN
+  OPEN c_contar_lateralidad(v_ID_Atleta);
+  FETCH c_contar_lateralidad INTO v_ID_Atleta, v_Diestro, v_Zurdo, v_Ambidiestro;
+  CLOSE c_contar_lateralidad;
+  
+  DBMS_OUTPUT.PUT_LINE('ID Atleta: ' || v_ID_Atleta);
+  DBMS_OUTPUT.PUT_LINE('Diestro: ' || v_Diestro);
+  DBMS_OUTPUT.PUT_LINE('Zurdo: ' || v_Zurdo);
+  DBMS_OUTPUT.PUT_LINE('Ambidiestro: ' || v_Ambidiestro);
+END;
+/
+
