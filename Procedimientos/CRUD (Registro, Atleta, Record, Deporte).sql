@@ -18,7 +18,7 @@ END;
 /
 
 EXECUTE sp_InsertarRegistro(51, SYSTIMESTAMP, 1);
-
+SELECT * FROM REGISTRO;
 --Ver
 CREATE OR REPLACE PROCEDURE sp_ConsultarRegistro (
     p_id_registro IN registro.id_registro%TYPE,
@@ -59,7 +59,7 @@ END;
 /
 
 EXECUTE sp_ActualizarRegistro(51, SYSTIMESTAMP, 3);
-
+SELECT * FROM REGISTRO;
 --Eliminar
 CREATE OR REPLACE PROCEDURE sp_eliminarregistro (
     p_id_registro IN registro.id_registro%TYPE
@@ -72,7 +72,7 @@ END;
 /
 
 EXECUTE sp_EliminarRegistro(51);
-
+SELECT * FROM REGISTRO;
 --CRUD Atleta
 
 --Insertar
@@ -277,7 +277,7 @@ END;
 /
 
 EXECUTE sp_InsertarDeporte(21, 'Salto Alto', 2,'Relevos', 4);
-
+SELECT * FROM DEPORTE;
 --Ver
 CREATE OR REPLACE PROCEDURE sp_ConsultarDeporte(
 p_ID_Deporte IN Deporte.ID_Deporte%TYPE,
