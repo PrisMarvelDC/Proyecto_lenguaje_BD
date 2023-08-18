@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="EVITAR_BORRADO_CON_REGISTRO" directorySegmentName="seg_0" id="B12748C3-4FEB-5383-4D7C-6A26DF8F674F">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>EVITAR_BORRADO_CON_REGISTRO</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>DELETE</actions>
+<body><![CDATA[DECLARE
+  v_count NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_count
+  FROM Registro
+  WHERE ID_Atleta = :OLD.ID_Atleta;
+
+  IF v_count > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se puede eliminar el atleta porque tiene registros en la tabla Registro.');
+  END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>C3C939F2-305A-FF3C-F66C-D22E5BB7A7E6</table>
+</TriggerOraclev10g>

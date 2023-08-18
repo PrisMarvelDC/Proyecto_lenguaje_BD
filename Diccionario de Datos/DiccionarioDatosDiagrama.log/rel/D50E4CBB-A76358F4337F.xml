@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="D50E4CBB-60A9-A5E1-6CAD-A76358F4337F" mainViewID="E0786C02-43E5-505E-D4E3-53AC9D308A2E">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 19:23:56 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importConnectionStamps>
+<importConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">
+<connName>ControlDeportivo</connName>
+<connUser>sys</connUser>
+<connType>1</connType>
+</importConnectionStamp>
+</importConnectionStamps>
+</relationalModel>

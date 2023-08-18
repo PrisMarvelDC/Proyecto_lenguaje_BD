@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BD79617A-39F8-DCB3-725F-BD3B435CECA8" schemaObject="B21EDF75-82BA-16F2-209A-B434D2A14410" name="REGISTRO">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>REGISTRO</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:23 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_REGISTRO" id="CD0814A9-564E-567A-155B-7C8D60A00849">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>REGISTRO</sourceObjSchema>
+<sourceObjName>ID_REGISTRO</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTRO" id="763442E5-B8DD-0C97-D8EB-D5DBDA6009E7">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>REGISTRO</sourceObjSchema>
+<sourceObjName>REGISTRO</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ATLETA" id="04970A3E-8AC2-1F40-7A14-70654E359E70">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>REGISTRO</sourceObjSchema>
+<sourceObjName>ID_ATLETA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D3951374-5EC4-E5F3-F4CE-A3E5669FFBB2" referredColumn="5F772C3C-E225-4BF8-7B58-221967593A99"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A82906B-DD2E-9721-A67B-BDD43C639660" schemaObject="B21EDF75-82BA-16F2-209A-B434D2A14410" name="REGISTRO_PK">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>SYS_C008603</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD0814A9-564E-567A-155B-7C8D60A00849"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FC62F885-884F-CA78-7577-70030FBB5432" name="SYS_C008604">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04970A3E-8AC2-1F40-7A14-70654E359E70"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

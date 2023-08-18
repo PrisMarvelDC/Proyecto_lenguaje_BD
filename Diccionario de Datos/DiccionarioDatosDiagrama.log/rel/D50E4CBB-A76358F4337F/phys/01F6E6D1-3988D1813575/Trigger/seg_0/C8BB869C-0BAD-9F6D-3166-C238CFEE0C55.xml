@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="CALCULAR_IMC" directorySegmentName="seg_0" id="C8BB869C-0BAD-9F6D-3166-C238CFEE0C55">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>CALCULAR_IMC</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[DECLARE
+  altura_metros NUMBER;
+BEGIN
+  altura_metros := :NEW.Altura / 100.0;
+
+  :NEW.IMC := :NEW.Masa / (altura_metros * altura_metros);
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>256E57EF-BD7A-E22C-C4D0-ABAD1390BCEF</table>
+</TriggerOraclev10g>

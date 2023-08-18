@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="REGISTRO" directorySegmentName="seg_0" id="BD79617A-39F8-DCB3-725F-BD3B435CECA8">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:23 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<schemaObject>B21EDF75-82BA-16F2-209A-B434D2A14410</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>C103DF65-DEB9-8C49-9BC0-341EDFA2EB91</segment>
+<tableSpace>A8A68467-09EE-D907-7244-428A21ECBA84</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_ATLETA" id="04970A3E-8AC2-1F40-7A14-70654E359E70">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGISTRO" id="763442E5-B8DD-0C97-D8EB-D5DBDA6009E7">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_REGISTRO" id="CD0814A9-564E-567A-155B-7C8D60A00849">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008604" id="FC62F885-884F-CA78-7577-70030FBB5432">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REGISTRO_PK" id="4A82906B-DD2E-9721-A67B-BDD43C639660">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:25 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<schemaObject>B21EDF75-82BA-16F2-209A-B434D2A14410</schemaObject>
+<segment>59D488D2-C41E-7D5D-F037-A0523041A904</segment>
+<tableSpace>A8A68467-09EE-D907-7244-428A21ECBA84</tableSpace>
+<indexSegment>59D488D2-C41E-7D5D-F037-A0523041A904</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

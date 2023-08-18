@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="93792A9A-851E-F217-E37C-A3320401DC63" mainViewID="CF6632CA-9E90-4E93-2523-92F01D5E90AF">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 19:23:52 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

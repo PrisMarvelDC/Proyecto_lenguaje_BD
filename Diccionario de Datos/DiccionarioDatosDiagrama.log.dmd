@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DiccionarioDatosDiagrama.log" id="0B72A33F-F0ED-6119-361E-142B39DE8D0C" version="3.5">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 19:23:52 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>0B72A33F-F0ED-6119-361E-142B39DE8D0C</designId>
+</OSDM_Design>

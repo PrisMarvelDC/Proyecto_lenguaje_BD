@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FF5DF99A-2C59-E08D-613C-DDC2A4648D90" containerWithKeyObject="256E57EF-BD7A-E22C-C4D0-ABAD1390BCEF" localFKIndex="5B260248-14BC-FF25-CEE3-91BECEB48E10" name="SYS_C008588">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>SYS_C008588</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<referredTableLongName>ENTRENADOR.CIRCUNFERENCIAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4C0FA3DC-789B-1509-E3FF-E9AC18882D9A</referredTableID>
+<keyObject>C54E8763-E01E-7E3B-066E-76B31828E66F</keyObject>
+<referredKeyID>C54E8763-E01E-7E3B-066E-76B31828E66F</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID_CIRCUNFERENCIAS</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

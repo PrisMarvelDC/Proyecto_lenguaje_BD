@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EF5ADECF-DD92-31C5-6064-10A67F183859" containerWithKeyObject="76796DCC-9331-147D-56D4-6C9D1B2F9415" localFKIndex="98A474B5-C9FF-4F6E-C1B9-B67031CBF907" name="SYS_C008594">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>SYS_C008594</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<referredTableLongName>ENTRENADOR.CALENTAMIENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A113BDF8-F086-3553-0B2A-F13F8D9E48ED</referredTableID>
+<keyObject>0A496B91-C67D-08A9-BCA3-E4FAA9CE5B3F</keyObject>
+<referredKeyID>0A496B91-C67D-08A9-BCA3-E4FAA9CE5B3F</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID_CALENTAMIENTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

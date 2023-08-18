@@ -1,0 +1,189 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="256E57EF-BD7A-E22C-C4D0-ABAD1390BCEF" schemaObject="B21EDF75-82BA-16F2-209A-B434D2A14410" name="ANTROPOMETRIA">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>ANTROPOMETRIA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:23 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ANTROPOMETRIA" id="452F7082-92D8-D4D4-8C74-AE1A60106239">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ANTROPOMETRIA</sourceObjSchema>
+<sourceObjName>ID_ANTROPOMETRIA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MASA" id="A21B7A5E-77FA-E498-8F4F-8428A734C3C3">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ANTROPOMETRIA</sourceObjSchema>
+<sourceObjName>MASA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ALTURA" id="721721C7-F4C5-033D-0308-3D656366EB50">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ANTROPOMETRIA</sourceObjSchema>
+<sourceObjName>ALTURA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSERVACIONES" id="E826D9AF-DB6C-67BA-FFEE-4A96C3D2D7CA">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ANTROPOMETRIA</sourceObjSchema>
+<sourceObjName>OBSERVACIONES</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CIRCUNFERENCIAS" id="E2E2DB3C-8A88-95D7-19F4-63CBED70FAFA">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ANTROPOMETRIA</sourceObjSchema>
+<sourceObjName>ID_CIRCUNFERENCIAS</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF5DF99A-2C59-E08D-613C-DDC2A4648D90" referredColumn="49F7886B-F1BF-FA07-7A5A-A0203D8E9DCF"/>
+</associations>
+</Column>
+<Column name="ID_PLIEGUES" id="963014E6-A03C-EFB0-2EF9-001B7776272B">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ANTROPOMETRIA</sourceObjSchema>
+<sourceObjName>ID_PLIEGUES</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="20C1C862-091A-7EE3-2198-9E784E45D9B9" referredColumn="5B2323DC-45E2-11D8-0AEF-2E685019D394"/>
+</associations>
+</Column>
+<Column name="ID_MORFOLOGIA" id="44D60995-A7CE-CF35-C0E3-1D00E7D40064">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ANTROPOMETRIA</sourceObjSchema>
+<sourceObjName>ID_MORFOLOGIA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8ADFCF6C-CE7F-383E-5CF4-8C43275083D2" referredColumn="6A440C54-8E2C-79A8-6D08-5A20DA11FEFC"/>
+</associations>
+</Column>
+<Column name="IMC" id="5CAB7B12-4D03-0F6F-E0FB-0D176A161D7E">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ANTROPOMETRIA</sourceObjSchema>
+<sourceObjName>IMC</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="818ED626-9F61-93AC-FA1A-3FF54EBA0508" schemaObject="B21EDF75-82BA-16F2-209A-B434D2A14410" name="ANTROPOMETRIA_PK">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>SYS_C008587</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="452F7082-92D8-D4D4-8C74-AE1A60106239"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B260248-14BC-FF25-CEE3-91BECEB48E10" name="SYS_C008588">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2E2DB3C-8A88-95D7-19F4-63CBED70FAFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C935150-F6CA-C0C7-B87B-EA93B507C246" name="SYS_C008589">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="963014E6-A03C-EFB0-2EF9-001B7776272B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="752E0E5C-8EDB-8B4F-4F3A-9060C4F6C3C6" name="SYS_C008590">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44D60995-A7CE-CF35-C0E3-1D00E7D40064"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

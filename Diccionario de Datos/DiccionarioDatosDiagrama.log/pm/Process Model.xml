@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="BD6E05BE-C9E0-D9EA-2B45-B6C422E5B30C">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 19:23:52 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

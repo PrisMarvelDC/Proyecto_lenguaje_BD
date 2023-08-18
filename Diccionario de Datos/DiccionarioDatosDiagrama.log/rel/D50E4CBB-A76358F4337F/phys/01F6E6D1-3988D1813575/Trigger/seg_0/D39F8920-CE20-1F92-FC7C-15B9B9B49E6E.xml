@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="VERIFICAR_ANTROPOMETRIA_DUPLICADA" directorySegmentName="seg_0" id="D39F8920-CE20-1F92-FC7C-15B9B9B49E6E">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>VERIFICAR_ANTROPOMETRIA_DUPLICADA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[DECLARE
+  v_count NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_count
+  FROM Antropometria
+  WHERE ID_Atleta = :NEW.ID_Atleta AND TRUNC(FechaRegistro) = TRUNC(:NEW.FechaRegistro);
+
+  IF v_count > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Ya existe un registro de antropometría para el mismo atleta en la misma fecha.');
+  END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>256E57EF-BD7A-E22C-C4D0-ABAD1390BCEF</table>
+</TriggerOraclev10g>

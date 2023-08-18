@@ -1,0 +1,335 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D900B41-3B61-BD88-E6B7-CCB0B3902D16" schemaObject="B21EDF75-82BA-16F2-209A-B434D2A14410" name="ESPECIFICO">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>ESPECIFICO</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:23 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ESPECIFICO" id="EB616073-1E38-3FDD-B973-B39450F8BE4F">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>ID_ESPECIFICO</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EJERCICIO1" id="47313508-585F-8EFB-5047-77C0085A37CD">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO1</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97F4A3BB-AD03-6B12-8434-4B333BF71E19" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO2" id="250EF1AA-BCE7-C6C3-4C61-147F75B12B64">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO2</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A489FB9-1769-4793-E8CF-DE8E02C84546" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO3" id="88378896-438E-2CF3-3F4C-630186C52C34">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO3</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0575378-564A-1031-A59D-C161523BE02C" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO4" id="499699F6-3242-5ACF-7359-FE9DA837E23A">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO4</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83A4A8F8-8992-113D-7E1D-DCB75CA0CF95" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO5" id="13897660-6B3C-6C8B-ADE6-22E30F85FDF9">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO5</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="93B0B31F-3E3A-E45A-7455-B8B7E83B999D" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO6" id="B69D363E-19E4-792C-3FFB-2283C2CC1AAC">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO6</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DBDBA829-57B5-72CE-BFE6-6CE63E784089" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO7" id="CC7C19B8-2DF0-3EAF-C53A-2439E9446932">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO7</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84C4F9DA-9551-95A0-3110-88413599E251" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO8" id="6E21AD57-7B1A-27F7-E551-114B0FD0F44A">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO8</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BEFC0025-A5EA-C44E-967C-EDB1751236ED" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO9" id="50CE3E78-9217-4DE8-AA44-665D21DCF5CA">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO9</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EAE6F976-10F4-942C-F700-332C120B14BD" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+<Column name="EJERCICIO10" id="B5AA9985-925A-70D0-558E-17794A641A50">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ESPECIFICO</sourceObjSchema>
+<sourceObjName>EJERCICIO10</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F49FC551-AA53-F60F-50BE-95CCC8293EF7" referredColumn="110D5F4C-FC62-8DE8-2E5E-F1E2C7509D8A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C0B84828-7DCB-F286-7640-8AA12DC0B1EE" schemaObject="B21EDF75-82BA-16F2-209A-B434D2A14410" name="ESPECIFICO_PK">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>SYS_C008566</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB616073-1E38-3FDD-B973-B39450F8BE4F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="662C2754-0911-2CBA-F713-55953D63AE61" name="SYS_C008567">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47313508-585F-8EFB-5047-77C0085A37CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF3B6BFC-A268-714D-B146-7DDDEB9EE32B" name="SYS_C008568">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="250EF1AA-BCE7-C6C3-4C61-147F75B12B64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40C2C05E-D206-17F1-8A00-5187EBAC457D" name="SYS_C008569">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88378896-438E-2CF3-3F4C-630186C52C34"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C2B6FA73-42C7-1E07-2A6C-833B48DFB563" name="SYS_C008570">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="499699F6-3242-5ACF-7359-FE9DA837E23A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23C06C94-7D77-4FDA-D418-62E0AA3EF486" name="SYS_C008571">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13897660-6B3C-6C8B-ADE6-22E30F85FDF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C53CCF94-9477-5A8F-504B-654C93CC1D46" name="SYS_C008572">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B69D363E-19E4-792C-3FFB-2283C2CC1AAC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E046E540-8CD2-1E14-8B93-A926621D30E3" name="SYS_C008573">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC7C19B8-2DF0-3EAF-C53A-2439E9446932"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0BB31C0-FE0A-68DC-A84C-39B5E3929800" name="SYS_C008574">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E21AD57-7B1A-27F7-E551-114B0FD0F44A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E13ABDD9-9533-4380-DC7D-39AA2B647A23" name="SYS_C008575">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50CE3E78-9217-4DE8-AA44-665D21DCF5CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8F297F86-6A36-96BF-86AB-115DD796FD44" name="SYS_C008576">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5AA9985-925A-70D0-558E-17794A641A50"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

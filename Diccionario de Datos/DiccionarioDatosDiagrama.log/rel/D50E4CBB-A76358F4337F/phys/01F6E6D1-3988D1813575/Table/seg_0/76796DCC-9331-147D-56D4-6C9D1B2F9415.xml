@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="CCR" directorySegmentName="seg_0" id="76796DCC-9331-147D-56D4-6C9D1B2F9415">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:23 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<schemaObject>B21EDF75-82BA-16F2-209A-B434D2A14410</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>C103DF65-DEB9-8C49-9BC0-341EDFA2EB91</segment>
+<tableSpace>A8A68467-09EE-D907-7244-428A21ECBA84</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_RECUPERACION" id="126587AD-9CA3-B789-CC38-1620B9905A1C">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CCR" id="25B1E5F0-2272-DDC3-35D4-F0CF3D2BF62F">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_LATERALIDAD" id="88321097-56BB-15B4-F911-D3388273F646">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHAREGISTRO" id="A82AF8FF-8AD4-060E-0B81-73A1D05500D0">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_ESPECIFICO" id="C2B2A172-4A29-631D-199F-CED0D40C9858">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CALENTAMIENTO" id="CE46562B-C36D-B85F-79F6-A8A0B1F6D050">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008595" id="8F4D1D43-FA4D-D4BD-6A2B-ABE9C459BBFE">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008594" id="98A474B5-C9FF-4F6E-C1B9-B67031CBF907">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008596" id="E659E2AF-8992-3285-BD5F-81A323CCF9FB">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="SYS_C008593" id="EB90E5D5-3A8E-4E74-7571-88A7775A8362">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CCR_PK" id="8DFBD735-0B90-EEC4-88F4-B3B8614F107E">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:25 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<schemaObject>B21EDF75-82BA-16F2-209A-B434D2A14410</schemaObject>
+<segment>59D488D2-C41E-7D5D-F037-A0523041A904</segment>
+<tableSpace>A8A68467-09EE-D907-7244-428A21ECBA84</tableSpace>
+<indexSegment>59D488D2-C41E-7D5D-F037-A0523041A904</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

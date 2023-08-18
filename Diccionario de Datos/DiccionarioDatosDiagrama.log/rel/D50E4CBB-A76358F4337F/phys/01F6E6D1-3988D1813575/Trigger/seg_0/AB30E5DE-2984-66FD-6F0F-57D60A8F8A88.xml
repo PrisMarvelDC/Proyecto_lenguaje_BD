@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="VALIDAR_FECHA_NACIMIENTO_ATLETA" directorySegmentName="seg_0" id="AB30E5DE-2984-66FD-6F0F-57D60A8F8A88">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>VALIDAR_FECHA_NACIMIENTO_ATLETA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[DECLARE
+v_fecha_actual DATE;
+v_id_record_exists NUMBER;
+BEGIN
+SELECT SYSDATE INTO v_fecha_actual FROM DUAL;
+IF :NEW.FN > v_fecha_actual THEN
+RAISE_APPLICATION_ERROR(-20009, 'La fecha de nacimiento no puede ser posterior a la fecha actual');
+END IF;
+
+SELECT COUNT(*) INTO v_id_record_exists FROM Record WHERE ID_Record = :NEW.ID_PB;
+IF :NEW.ID_PB IS NOT NULL AND v_id_record_exists = 0 THEN
+RAISE_APPLICATION_ERROR(-20010, 'La referencia al ID_Record no es válida.');
+END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>C3C939F2-305A-FF3C-F66C-D22E5BB7A7E6</table>
+</TriggerOraclev10g>

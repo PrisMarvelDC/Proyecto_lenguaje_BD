@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="VALIDAR_TIEMPOS_DEPORTE" directorySegmentName="seg_0" id="F10153E2-C917-C943-69E7-58E818518978">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>VALIDAR_TIEMPOS_DEPORTE</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+IF :NEW.Tiempo1 < 0 OR :NEW.Tiempo2 < 0 THEN
+RAISE_APPLICATION_ERROR(-20008, 'Los tiempos de disiciplinas no se pueden ser negativos');
+END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>D7787D40-F84B-B5CB-C873-03EC1BDD1096</table>
+</TriggerOraclev10g>

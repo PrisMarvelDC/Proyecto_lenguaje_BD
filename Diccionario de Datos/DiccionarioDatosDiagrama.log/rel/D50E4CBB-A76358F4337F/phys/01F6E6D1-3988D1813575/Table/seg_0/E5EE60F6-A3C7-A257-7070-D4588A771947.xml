@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="PLAN" directorySegmentName="seg_0" id="E5EE60F6-A3C7-A257-7070-D4588A771947">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:23 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<schemaObject>B21EDF75-82BA-16F2-209A-B434D2A14410</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>C103DF65-DEB9-8C49-9BC0-341EDFA2EB91</segment>
+<tableSpace>A8A68467-09EE-D907-7244-428A21ECBA84</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DIA1" id="39568C02-5D40-8FEB-CCEF-E87F0B0B717B">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DIA3" id="8838BF8A-1557-A03F-57CE-65A0936363A9">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DIA6" id="957673E3-64F2-4981-A5A6-F0E08168B589">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DIA2" id="BAB2B552-0D73-6BB4-FDB3-D2E92880890C">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PLAN" id="C55C18BC-94F4-928C-F6F8-79B1B4C19D45">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DIA5" id="D80A472B-6F00-63D8-22BA-F0DA47F7581F">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DIA7" id="E37FDC31-126D-0F28-24B0-F345C53EDDC0">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DIA4" id="FBFE24AF-0400-BC6E-E5EC-15B4B9505F0E">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:24 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PLAN_PK" id="88839FDE-CA71-B04D-0911-842533E0028F">
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:25 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<schemaObject>B21EDF75-82BA-16F2-209A-B434D2A14410</schemaObject>
+<segment>59D488D2-C41E-7D5D-F037-A0523041A904</segment>
+<tableSpace>A8A68467-09EE-D907-7244-428A21ECBA84</tableSpace>
+<indexSegment>59D488D2-C41E-7D5D-F037-A0523041A904</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

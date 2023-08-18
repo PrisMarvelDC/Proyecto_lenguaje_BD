@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="VERIFICAR_REFERENCIAS_DEPORTE" directorySegmentName="seg_0" id="B468826B-E346-8F55-1C37-AE3D3C003254">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>VERIFICAR_REFERENCIAS_DEPORTE</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>DELETE</actions>
+<body><![CDATA[DECLARE
+  v_count NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_count FROM Atleta WHERE ID_Deporte = :OLD.ID_Deporte;
+  IF v_count > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se puede eliminar el deporte porque está siendo referenciado por la tabla Atleta.');
+  END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>D7787D40-F84B-B5CB-C873-03EC1BDD1096</table>
+</TriggerOraclev10g>

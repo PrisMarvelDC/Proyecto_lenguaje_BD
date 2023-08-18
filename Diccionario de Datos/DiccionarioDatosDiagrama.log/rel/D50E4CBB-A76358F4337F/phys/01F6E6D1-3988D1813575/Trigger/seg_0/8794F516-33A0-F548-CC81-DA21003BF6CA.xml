@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="VERIFICAR_REFERENCIAS_CCR" directorySegmentName="seg_0" id="8794F516-33A0-F548-CC81-DA21003BF6CA">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>VERIFICAR_REFERENCIAS_CCR</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[DECLARE
+l_count NUMBER;
+c_count NUMBER;
+e_count NUMBER;
+r_count NUMBER;
+BEGIN
+  -- Verificar si la referencia a "Lateralidad" es válida
+  IF :NEW.ID_Lateralidad IS NOT NULL THEN
+    SELECT COUNT(*) INTO l_count FROM Lateralidad WHERE ID_Lateralidad = :NEW.ID_Lateralidad;
+    IF l_count = 0 THEN
+      RAISE_APPLICATION_ERROR(-20003, 'La referencia a Lateralidad no es válida.');
+    END IF;
+  END IF;
+
+  -- Verificar si la referencia a "Calentamiento" es válida
+  IF :NEW.ID_Calentamiento IS NOT NULL THEN
+    SELECT COUNT(*) INTO c_count FROM Calentamiento WHERE ID_Calentamiento = :NEW.ID_Calentamiento;
+    IF c_count = 0 THEN
+      RAISE_APPLICATION_ERROR(-20004, 'La referencia a Calentamiento no es válida.');
+    END IF;
+  END IF;
+
+  -- Verificar si la referencia a "Especifico" es válida
+  IF :NEW.ID_Especifico IS NOT NULL THEN
+    SELECT COUNT(*) INTO e_count FROM Especifico WHERE ID_Especifico = :NEW.ID_Especifico;
+    IF e_count = 0 THEN
+      RAISE_APPLICATION_ERROR(-20005, 'La referencia a Especifico no es válida.');
+    END IF;
+  END IF;
+
+  -- Verificar si la referencia a "Recuperacion" es válida
+  IF :NEW.ID_Recuperacion IS NOT NULL THEN
+    SELECT COUNT(*) INTO r_count FROM Recuperacion WHERE ID_Recuperacion = :NEW.ID_Recuperacion;
+    IF r_count = 0 THEN
+      RAISE_APPLICATION_ERROR(-20006, 'La referencia a Recuperacion no es válida.');
+    END IF;
+  END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>76796DCC-9331-147D-56D4-6C9D1B2F9415</table>
+</TriggerOraclev10g>

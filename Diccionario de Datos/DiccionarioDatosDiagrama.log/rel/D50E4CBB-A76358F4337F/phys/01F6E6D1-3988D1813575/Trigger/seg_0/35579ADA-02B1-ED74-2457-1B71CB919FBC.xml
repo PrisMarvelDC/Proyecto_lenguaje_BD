@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="VERIFICAR_NULL_ATLETA" directorySegmentName="seg_0" id="35579ADA-02B1-ED74-2457-1B71CB919FBC">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>VERIFICAR_NULL_ATLETA</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+  IF :NEW.FN IS NULL OR :NEW.ID_Deporte IS NULL OR :NEW.ID_PB IS NULL OR
+     :NEW.ID_Ciclo IS NULL OR :NEW.ID_Antropometria IS NULL OR :NEW.ID_Plan IS NULL OR
+     :NEW.ID_CCR IS NULL THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se permiten valores NULL en la tabla Atleta.');
+  END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>C3C939F2-305A-FF3C-F66C-D22E5BB7A7E6</table>
+</TriggerOraclev10g>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="VALIDAR_DIAS_PLAN" directorySegmentName="seg_0" id="100B9B46-CB72-CE5F-4B28-67E81F38A9E3">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>VALIDAR_DIAS_PLAN</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+IF :NEW.Dia1 IS NULL AND :NEW.Dia2 IS NULL AND : NEW.Dia3 IS NULL AND : NEW.Dia4 IS NULL AND : NEW.Dia5 IS NULL AND : NEW.Dia6 IS NULL AND : NEW.Dia7 IS NULL THEN
+RAISE_APPLICATION_ERROR(-20007, 'Debe especificar al menos un día en el plan de entrenamientos');
+END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>E5EE60F6-A3C7-A257-7070-D4588A771947</table>
+</TriggerOraclev10g>

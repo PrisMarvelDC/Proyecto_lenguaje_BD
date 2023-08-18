@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="VERIFICAR_CIRCUNFERENCIAS" directorySegmentName="seg_0" id="F27B1CC8-6A33-2A29-F6FD-6F85A9FE660B">
+<sourceConnName>ControlDeportivo</sourceConnName>
+<sourceObjSchema>ENTRENADOR</sourceObjSchema>
+<sourceObjName>VERIFICAR_CIRCUNFERENCIAS</sourceObjName>
+<createdBy>Kenneth Robles</createdBy>
+<createdTime>2023-08-18 21:40:26 UTC</createdTime>
+<ownerDesignName>DiccionarioDatosDiagrama.log</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+  IF :NEW.BicepsRej <= 0 OR :NEW.BicepsCont <= 0 OR :NEW.Muneca <= 0 OR
+     :NEW.Antebrazo <= 0 OR :NEW.Pecho <= 0 OR :NEW.Cintura <= 0 OR
+     :NEW.Cadera <= 0 OR :NEW.MusloRej <= 0 OR :NEW.MusloCont <= 0 OR
+     :NEW.Pantorrilla <= 0 OR :NEW.Tobillo <= 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Los valores deben ser mayores a 0 en la tabla CIRCUNFERENCIAS.');
+  END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>1FC0C120-C1C5-60B3-D2B9-266255152990</owner>
+<table>4C0FA3DC-789B-1509-E3FF-E9AC18882D9A</table>
+</TriggerOraclev10g>
